@@ -1,6 +1,8 @@
 
 
 ![fibpeo](https://github.com/bhaskar-bhandari/fibeo-assignment/assets/115574035/77bc28dd-26db-4e70-8d4f-6878a4e9d671)
+![fibpeo2](https://github.com/bhaskar-bhandari/fibeo-assignment/assets/115574035/0a1ff082-6df7-40d4-9742-5ae06da5532b)
+![fibpeo3](https://github.com/bhaskar-bhandari/fibeo-assignment/assets/115574035/70ad4802-e357-418e-aacb-ed2a704d809e)
 
 
 Table of Contents
