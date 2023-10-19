@@ -6,13 +6,16 @@ import { TiThLargeOutline } from "react-icons/ti";
 import { PiUserPlusBold,PiHeadsetBold,PiCrosshairSimpleFill } from "react-icons/pi";
 import { FiHelpCircle  } from "react-icons/fi";
 import {  TiChevronRight } from "react-icons/ti";
+import {GiHamburgerMenu} from "react-icons/gi";
+import { useState } from 'react';
 
 const NavBar = () => {
+  const[showNav,setShowNav] = useState(false)
   return (
     
-    <Nav>
+    <Nav className='nav'>
         <div className='nav-container'>
-        <ul className='navbar-lists'>
+        <ul className={showNav ? 'navbar-lists mobile-link' :'navbar-lists'}>
             <li>
               <NavLink
                 to="/">
@@ -59,6 +62,13 @@ const NavBar = () => {
               </NavLink>
             </li>
         </ul>
+        {/* hamburger menu */}
+        <div className='hamburger-menu'>
+          <a href="#" onClick={()=>setShowNav(!showNav)}>
+            <GiHamburgerMenu/>
+          </a>
+        </div>
+
     </div>
   
     
@@ -80,13 +90,13 @@ const Nav = styled.nav`
         li{
           list-style:none;
           margin-bottom:1.3rem;
-        }
+
         a{
             color:${({theme})=>theme.colors.white};
             text-decoration: none;
             cursor:pointer;
         }
-        
+      } 
     }
     .product{
       margin-bottom: -0.2rem;
@@ -102,6 +112,41 @@ const Nav = styled.nav`
     }
     .help{
       margin-bottom: -0.2rem;
+    }
+    .hamburger-menu{
+      display:none;
+    }
+    @media (max-width: ${({ theme }) => theme.media.mobile}) {
+      .hamburger-menu{
+        display:block;
+        position: absolute;
+        right: 22px;
+        top: 15px;
+        font-size: 2rem;
+        a{
+          color:white;
+        }
+      }
+      .navbar-lists{
+        display:none;
+      }
+      .mobile-link{
+        display:flex;
+        flex-direction:column;
+        list-style-type:none;
+        li{
+          list-style:none;
+          margin-bottom:1.3rem;
+          text-align: center;
+        a{
+            color:${({theme})=>theme.colors.white};
+            text-decoration: none;
+            cursor:pointer;
+        }
+      }
+    }
+    .nav{
+      display:inline-block;
     }
   
 `
