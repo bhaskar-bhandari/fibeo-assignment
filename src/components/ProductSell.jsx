@@ -117,7 +117,7 @@ const Wrapper = styled.section`
     margin-left:4.1rem;
    }
    .total-products{
-    grid-template-columns: 52% 16% 16% 16%;
+    grid-template-columns: 35% 20% 20% 19%;
     margin-bottom: 1rem;
     margin-top: 1rem;
    }
